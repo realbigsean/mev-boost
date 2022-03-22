@@ -44,7 +44,7 @@ func newRelayService(relayURLs []string, store Store, log *logrus.Entry) (*Relay
 
 func makeRequest(ctx context.Context, url string, method string, params []interface{}) (*rpcResponse, error) {
 	reqJSON := rpcRequest{
-		ID:      "1",
+		ID:      1,
 		JSONRPC: "2.0",
 		Method:  method,
 		Params:  params,

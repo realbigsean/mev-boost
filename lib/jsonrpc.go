@@ -16,14 +16,14 @@ func (err rpcError) Error() string {
 }
 
 type rpcResponse struct {
-	ID      string          `json:"id"`
+	ID      int             `json:"id"`
 	JSONRPC string          `json:"jsonrpc"`
 	Result  json.RawMessage `json:"result"`
 	Error   *rpcError       `json:"error"`
 }
 
 type rpcRequest struct {
-	ID      string        `json:"id"`
+	ID      int           `json:"id"`
 	JSONRPC string        `json:"jsonrpc"`
 	Method  string        `json:"method"`
 	Params  []interface{} `json:"params"`
